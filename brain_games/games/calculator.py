@@ -1,5 +1,6 @@
 import prompt
 from brain_games.engine import push, random_values, task, correct_response
+from brain_games.scripts import brain_games
 
 
 def check_calculator():
@@ -21,7 +22,9 @@ def check_calculator():
                 start += 1
         else:
              push.loss(response, correct_response.response_calc(calculation), name )
+             brain_games.main()
              break
         
         if start > finish:
              push.victory(name)
+             brain_games.main()
