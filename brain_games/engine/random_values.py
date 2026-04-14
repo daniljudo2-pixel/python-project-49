@@ -2,7 +2,7 @@ import itertools
 import random
 
 
-def random_randit():
+def random_number():
     return abs(random.randint(0, 50))
 
 
@@ -11,15 +11,15 @@ def random_choice():
     
 
 def random_calculator():
-    num1 = random_randit()
-    num2 = random_randit()
+    num1 = random_number()
+    num2 = random_number()
     calc = random_choice()
     question = f'{num1} {calc} {num2}'
     return question
 
 def random_progression():
     #создаем прогрессию
-    counter = itertools.count(random_randit(),random.randint(2, 5))
+    counter = itertools.count(random_number(),random.randint(2, 5))
     list = []
     for i in range(10):
        list.append(str(next((counter))))
@@ -28,9 +28,8 @@ def random_progression():
     #и записываем ответ в correct_responce
     list_question = list.copy()
     index = random.randint(0, 9)
-    correct_responce = list_question[index]
     list_question[index] = '..'
 
-    result = ' '.join(list_question)
+    question = ' '.join(list_question)
 
-    return result, correct_responce
+    return question

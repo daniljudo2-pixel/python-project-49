@@ -1,7 +1,6 @@
 import prompt
 
-from brain_games.engine import push, random_values, task, correct_response
-from brain_games.scripts import brain_games
+from brain_games.engine import correct_response, push, random_values, task
 
 
 def progression():
@@ -15,17 +14,16 @@ def progression():
     finish = 3
 
     while start <= finish:
-        progression_question = random_values.random_progression()
-        print(f'Question: {progression_question[0]}')
+        progression = random_values.random_progression()
+        print(f'Question: {progression}')
         response = prompt.string('Your answer: ')
-        if progression_question[1] == response:
+        correct_resp = correct_response.response_progression(progression)
+        if correct_resp == response:
             push.correct()
             start += 1
         else:
-            push.loss(response, progression_question[1], name)
-            brain_games.main()
+            push.loss(response, correct_resp, name)
             break
         
         if start > finish:
              push.victory(name)
-             brain_games.main()
