@@ -39,24 +39,22 @@
 #### Минимальные системные требования
 
 Python ≥ 3.12
-uv latest
-make любой актуальной версии
+  uv latest
+  make любой актуальной версии
 
-#### Установка
+## Установка
 
-Клонируйте репозитори:
-`git clone git@github.com:daniljudo2-pixel/python-project-49.git`
+1. Клонируйте репозиторий:
+   `git clone git@github.com:daniljudo2-pixel/python-project-49.git`
+2. Установите uv: 
+   `https://docs.astral.sh/uv/getting-started/installation/`
+3. Установите зависимости:
+   `uv sync`
+4. Установите make (если отсутствует):
+  Ubuntu: sudo apt install build-essential
+  macOS: xcode-select --install
+  Windows: choco install make
 
-Установите uv (если ещё не установлен):
-https://docs.astral.sh/uv/getting-started/installation/
-
-В корневой папке проекта выполните:
-`uv sync`
-
-Установите make (если отсутствует):
-**Ubuntu:** `sudo apt install build-essential`
-**macOS:** `xcode-select --install`
-**Windows:** `choco install make`
 
 
 #### Запуск игры
