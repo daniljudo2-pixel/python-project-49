@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.engine import push, correct_response, random_values, task
+from brain_games.engine import correct_response, push, random_values, task
 
 
 def check_calculator():
