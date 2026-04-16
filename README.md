@@ -46,13 +46,14 @@
    git clone git@github.com:daniljudo2-pixel/python-project-49.git
    cd python-project-49
 2. Установите uv (если ещё не установлен):
-Инструкция: https://docs.astral.sh/uv/getting-started/installation/
+  Инструкция: https://docs.astral.sh/uv/getting-started/installation/
 3. Установите зависимости:
-   'uv sync'
+   ```bash
+   uv sync
 
 
 
-#### Запуск игры
+## 🕹 Запуск игры
 
 Запуск игры осуществялется путем ввода консольных команд в КОРНЕВОЙ папке проекта:
 1. make brain-even - «Калькулятор»
@@ -61,17 +62,18 @@
 4. make brain-progression - «Арифметическая прогрессия»
 5. make brain-prime - «Простое ли число?»
 
-#### Возможные ошибки
-`make: command not found`- команда для запуска игры введена неверно.
-Используйте команды для запуска, описанные в запуске игры.
-`brain-calc: command not found `- запуск без 'make'
-Используйте команды для запуска, описанные в запуске игры.
-`make: *** No rule to make target 'brain-gcd'`- команда запущена не из корневой папки.
-Запускайте игры из корневой папки проекта.
+## 🐛 Возможные ошибки
+| Ошибка | Причина | Решение |
+|-----------|----------|----------|
+| `make: command not found` | Утилита make не установлена или не в PATH | Используйте команды для запуска, описанные в запуске игры |
+| `brain-calc: command not found ` |  Запуск без 'make' | Используйте команды для запуска, описанные в запуске игры |
+| `make: *** No rule to make target 'brain-gcd'`| Команда запущена не из корневой папки | Запускайте игры из корневой папки проекта |
+
+---
 
 
 
-#### Геймплей
+## 🎲 Геймплей
 
 #### brain-even
 [![asciicast](https://asciinema.org/a/QVyUumkUxvewFio0.svg)](https://asciinema.org/a/QVyUumkUxvewFio0)
