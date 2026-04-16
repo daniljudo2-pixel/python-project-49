@@ -15,7 +15,7 @@
 
 # 🚀 Brain games (Игры разума)
 
-Проект представляет собой пять мини игры для поддержания мозговой активности:
+#### Проект представляет собой пять мини игры для поддержания мозговой активности:
 
 1. «Проверка на чётность»
 Суть игры в следующем: пользователю показывается случайное число. 
@@ -37,27 +37,26 @@
 Игроку требуется определить, является ли число простым.
 
 #### Минимальные системные требования
-'''
->Python ≥ 3.12              
->`uv`   latest
->`make`  любой актуальной версии
-'''
 
-### Установка
+Python ≥ 3.12              
+`uv`   latest
+`make`  любой актуальной версии
+
+#### Установка
 
 Клонируйте репозитори: 
->git clone git@github.com:daniljudo2-pixel/python-project-49.git
+git clone git@github.com:daniljudo2-pixel/python-project-49.git
 Установите `uv` (если ещё не установлен): 
->https://docs.astral.sh/uv/getting-started/installation/
+https://docs.astral.sh/uv/getting-started/installation/
 В корневой папке проекта выполните: 
->uv sync
+`uv sync`
 Установите `make` (если отсутствует):
-> -**Ubuntu:** `sudo apt install build-essential`
-> -**macOS:** `xcode-select --install`
-> -**Windows:** `choco install make`
+**Ubuntu:** `sudo apt install build-essential`
+**macOS:** `xcode-select --install`
+**Windows:** `choco install make`
 
 
-### Запуск игры
+#### Запуск игры
 
 Запуск игры осуществялется путем ввода консольных команд в КОРНЕВОЙ папке проекта:
 1. make brain-even - «Калькулятор»
@@ -66,18 +65,17 @@
 4. make brain-progression - «Арифметическая прогрессия»
 5. make brain-prime - «Простое ли число?»
 
-### Возможные ошибки
-'''
-> -make: command not foundкоманда для запуска игры введена неверно.
+#### Возможные ошибки
+`make: command not found`- команда для запуска игры введена неверно.
 Используйте команды для запуска, описанные в запуске игры.
-> -brain-calc: command not found - запуск без 'make'
+`brain-calc: command not found `- запуск без 'make'
 Используйте команды для запуска, описанные в запуске игры.
-> -make: *** No rule to make target 'brain-gcd' - команда запущена не из корневой папки.
+`make: *** No rule to make target 'brain-gcd'`- команда запущена не из корневой папки.
 Запускайте игры из корневой папки проекта.
-'''
 
 
-### Геймплей
+
+#### Геймплей
 
 #### brain-even
 [![asciicast](https://asciinema.org/a/QVyUumkUxvewFio0.svg)](https://asciinema.org/a/QVyUumkUxvewFio0)
