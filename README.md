@@ -38,19 +38,22 @@
 
 #### Минимальные системные требования
 
-Python ≥ 3.12              
-`uv`   latest
-`make`  любой актуальной версии
+Python ≥ 3.12
+uv latest
+make любой актуальной версии
 
 #### Установка
 
-Клонируйте репозитори: 
-git clone git@github.com:daniljudo2-pixel/python-project-49.git
-Установите `uv` (если ещё не установлен): 
+Клонируйте репозитори:
+`git clone git@github.com:daniljudo2-pixel/python-project-49.git`
+
+Установите uv (если ещё не установлен):
 https://docs.astral.sh/uv/getting-started/installation/
-В корневой папке проекта выполните: 
+
+В корневой папке проекта выполните:
 `uv sync`
-Установите `make` (если отсутствует):
+
+Установите make (если отсутствует):
 **Ubuntu:** `sudo apt install build-essential`
 **macOS:** `xcode-select --install`
 **Windows:** `choco install make`
