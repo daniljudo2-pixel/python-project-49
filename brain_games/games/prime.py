@@ -1,6 +1,6 @@
 import prompt
 
-from brain_games.engine import push, correct_response, random_values, task
+from brain_games.engine import correct_response, push, random_values, task
 
 
 def prime():
@@ -23,6 +23,6 @@ def prime():
         else:
             push.loss(response, correct_response.response_prime(prime_question), name)
             break
-        
-        if start > finish:
-             push.victory(name)
+
+    if start > finish:
+        push.victory(name)

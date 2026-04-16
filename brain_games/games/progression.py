@@ -24,6 +24,6 @@ def progression():
         else:
             push.loss(response, correct_resp, name)
             break
-        
-        if start > finish:
-             push.victory(name)
+    
+    if start > finish:
+        push.victory(name)

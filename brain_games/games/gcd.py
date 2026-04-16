@@ -1,7 +1,6 @@
 import prompt
 
-from brain_games.engine import push, correct_response, random_values, task
-
+from brain_games.engine import correct_response, push, random_values, task
 
 
 def gcd():
@@ -26,7 +25,7 @@ def gcd():
             push.loss(response, correct_response.response_gcd(number_one, number_two), name)
             break
         
-        if start > finish:
-             push.victory(name)
+    if start > finish:
+        push.victory(name)
 
     
