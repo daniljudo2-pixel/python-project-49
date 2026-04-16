@@ -1,28 +1,31 @@
 import prompt
 
-from brain_games.engine import correct_response, push, random_values, task
+from brain_games.engine.correct_response import response_prime
+from brain_games.engine.push import correct, greet, loss, victory, welcome_user
+from brain_games.engine.random_values import random_number
+from brain_games.engine.task import task_prime
 
 
 def prime():
-    push.greet()
+    greet()
 
-    name = push.welcome_user()
+    name = welcome_user()
 
-    task.task_prime()
+    task_prime()
     
     start = 1
     finish = 3
 
     while start <= finish:
-        prime_question = random_values.random_number()
+        prime_question = random_number()
         print(f'Question: {prime_question}')
         response = prompt.string('Your answer: ')
-        if correct_response.response_prime(prime_question) == response:
-            push.correct()
+        if response_prime(prime_question) == response:
+            correct()
             start += 1
         else:
-            push.loss(response, correct_response.response_prime(prime_question), name)
+            loss(response, response_prime(prime_question), name)
             break
 
     if start > finish:
-        push.victory(name)
+        victory(name)

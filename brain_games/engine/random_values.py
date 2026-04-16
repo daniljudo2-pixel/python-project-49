@@ -23,9 +23,8 @@ def random_progression():
     counter = itertools.count(random_number(), random.randint(2, 5))
     list = []
     for i in range(10):
-       list.append(str(next((counter))))
-
-    # заменяем рандомный элемнент для задачи пользователю
+        list.append(str(next((counter))))
+    
     list_question = list.copy()
     index = random.randint(0, 9)
     list_question[index] = '..'

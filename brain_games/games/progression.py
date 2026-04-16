@@ -1,29 +1,32 @@
 import prompt
 
-from brain_games.engine import correct_response, push, random_values, task
+from brain_games.engine.correct_response import response_progression
+from brain_games.engine.push import correct, greet, loss, victory, welcome_user
+from brain_games.engine.random_values import random_progression
+from brain_games.engine.task import task_progression
 
 
 def progression():
-    push.greet()
+    greet()
 
-    name = push.welcome_user()
+    name = welcome_user()
 
-    task.task_progression()
+    task_progression()
 
     start = 1
     finish = 3
 
     while start <= finish:
-        progression = random_values.random_progression()
+        progression = random_progression()
         print(f'Question: {progression}')
         response = prompt.string('Your answer: ')
-        correct_resp = correct_response.response_progression(progression)
+        correct_resp = response_progression(progression)
         if correct_resp == response:
-            push.correct()
+            correct()
             start += 1
         else:
-            push.loss(response, correct_resp, name)
+            loss(response, correct_resp, name)
             break
     
     if start > finish:
-        push.victory(name)
+        victory(name)
